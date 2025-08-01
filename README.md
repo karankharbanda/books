@@ -1,6 +1,6 @@
 # books
 
-This repository is a Spring Boot application for managing a collection of books. It is written entirely in Java.
+This repository is a Spring Boot application for managing a collection of books
 
 ## Features
 
@@ -19,25 +19,18 @@ This repository is a Spring Boot application for managing a collection of books.
 ## Instructions to build and run the application
 
 1. **Clone the repository:**
-   ```
    git clone https://github.com/karankharbanda/books.git
-   ```
 
-2. **Navigate to the project directory:**
-   ```
-   cd books
-   ```
-
-3. **Build and run the application:**
+2. **Build and run the application:**
    Make sure you have Java (17+) and Maven installed.
-   ```
+   
    mvn spring-boot:run
-   ```
+   
    Or build the JAR and run it manually:
-   ```
+   
    mvn clean package
+   
    java -jar target/books-*.jar
-   ```
 
 4. **API Endpoints:**
 
@@ -51,14 +44,7 @@ This repository is a Spring Boot application for managing a collection of books.
 ## Additional Notes about Design Decisions
 
 - **Spring Boot & JPA:** The application uses Spring Boot for rapid development and Spring Data JPA for database interactions.
-- **Validation:** Uses JSR-303 bean validation to ensure data integrity (e.g., publication year range, non-blank fields).
 - **Exception Handling:** Custom exceptions like `ResourceNotFoundException` and data integrity violations are used for robust error management.
 - **DTO Pattern:** Separates request/response objects from the entity to keep API contracts clean and flexible.
 - **Modularity:** Service, controller, and repository layers are separated for maintainability and scalability.
 
-## License
-
-No license information provided.
-
----
-For more details, visit the [repository](https://github.com/karankharbanda/books).
