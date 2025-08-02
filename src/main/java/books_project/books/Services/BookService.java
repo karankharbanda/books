@@ -49,7 +49,6 @@ public class BookService {
         Book book = bookRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Book with ID " + id + " not found"));
 
-        // Check if the new ISBN is already taken by another book
         bookRepository.findByIsbn(bookRequest.getIsbn()).ifPresent(existingBook -> {
             if (!existingBook.getId().equals(id)) {
                 throw new DataIntegrityViolationException("ISBN already exists: " + bookRequest.getIsbn());
